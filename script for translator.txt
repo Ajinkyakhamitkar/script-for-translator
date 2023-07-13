@@ -1,0 +1,47 @@
+function moo_script_footer(){ ?>
+
+<script type="text/javascript">
+	jQuery(window).on('load', function() {
+		setTimeout(function () {
+        jQuery("#wu-thank-you-sites").html(jQuery("#wu-thank-you-sites").html().replace("Site", "Nettstedet"));
+        },5);
+});
+
+jQuery(window).on('load', function() {
+		setTimeout(function () {
+        jQuery("#wu-thank-you-order-details").html(jQuery("#wu-thank-you-order-details").html().replace("Order Details", "Ordre detaljer"));
+        },5);
+});
+
+jQuery(window).on('load', function() {
+		setTimeout(function () {
+        jQuery("#wu-thank-you-billing-address").html(jQuery("#wu-thank-you-billing-address").html().replace("Billing Address", "Fakturaadresse"));
+        },5);
+});
+
+
+jQuery(window).on('load', function() {
+		setTimeout(function () {
+        jQuery("#wu-your-site-block").html(jQuery("#wu-your-site-block").html().replace("yoursite.moocommerce.no", "dinside.moocommerce.no"));
+        },5);
+});
+
+jQuery(window).on('load', function() {
+		setTimeout(function () {
+        jQuery(".wu-block wu-bg-red-100 wu-p-2 wu-mb-4").html(jQuery(".wu-block wu-bg-red-100 wu-p-2 wu-mb-4").html().replace("The Username only allows a-z, 0-9, _ and -", "Brukernavnet tillater bare a-z, 0-9"));
+        },5);
+});
+
+jQuery(window).on('load', function() {
+		setTimeout(function () {
+        jQuery(".reg-main").html(jQuery(".reg-main").html().replace("The Username must be lowercase", "Brukernavnet må være i små bokstaver."));
+        },5);
+});
+
+
+
+</script>
+
+<?php } 
+
+add_action('wp_footer', 'moo_script_footer'); 
